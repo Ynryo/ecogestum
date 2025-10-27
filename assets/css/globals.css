@@ -144,7 +144,7 @@
     --components-sciences-fac: #007781;
     --background-dark: #040823;
     --dark: #000;
-    --medium: #7c7c7c;
+    --medium: #ababab;
     --light: #FFF;
 
 }
@@ -152,4 +152,25 @@
 body {
     margin: 0;
     font-family: Poppins, sans-serif;
+}
+
+h1 {
+    font-family: Goia, sans-serif;
+    font-size: 46px;
+}
+
+h2 {
+    font-family: Poppins, sans-serif;
+    font-size: 32px;
+}
+
+h3 {
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+}
+
+h4 {
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+
 }
