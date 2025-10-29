@@ -3,11 +3,11 @@
     text-decoration: none;
     color: var(--light);
     font-family: Poppins, sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 16px;
     width: fit-content;
     height: fit-content;
-    padding: 18px 30px;
+    padding: 15px 30px;
     border-radius: 50px;
     background-color: var(--primary-orange);
     transition: ease-in-out 0.2s;
@@ -52,4 +52,24 @@
 .button.blue.secondary:hover {
     border: 2px solid var(--hovered-blue);
     color: var(--hovered-blue);
+}
+
+/* LINKS */
+.link {
+    text-decoration: none;
+    color: var(--light);
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+a.link img {
+    cursor: pointer;
+    height: 35px;
+    transition: transform 0.2s;
+}
+
+a.link img:hover {
+    transform: scale(1.3);
 }

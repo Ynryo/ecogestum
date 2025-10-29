@@ -22,3 +22,50 @@
     background-color: var(--primary-blue);
     color: var(--light);
 }
+
+.keynums {
+    margin: 100px auto;
+}
+
+.keynums > div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    width: fit-content;
+}
+
+.keynums h1 {
+    font-size: 72px;
+    margin-bottom: 10px;
+}
+
+.blue-bg {
+    background-color: var(--tertiary-blue);
+    color: var(--primary-blue);
+}
+
+.red-bg {
+    background-color: var(--tertiary-orange);
+    color: var(--primary-orange);
+}
+
+.green-bg {
+    background-color: var(--tertiary-green);
+    color: var(--primary-green);
+}
+
+.they-speak {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: var(--tertiary-blue);
+}
+
+.press-releases {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: var(--primary-blue);
+    color: var(--light);
+}
