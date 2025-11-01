@@ -24,15 +24,20 @@
 }
 
 .keynums {
-    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px auto;
+    width: 100dvw;
 }
 
-.keynums > div {
+.keynums div {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     padding: 20px;
     width: fit-content;
+    position: relative;
 }
 
 .keynums h1 {
@@ -40,19 +45,40 @@
     margin-bottom: 10px;
 }
 
+.keynums div:nth-child(odd) h1,
+.keynums div:nth-child(even) p {
+    margin-right: 100px;
+    text-align: left;
+}
+
+.keynums div:nth-child(even) h1,
+.keynums div:nth-child(odd) p {
+    margin-left: 100px;
+    text-align: right;
+}
+
 .blue-bg {
     background-color: var(--tertiary-blue);
     color: var(--primary-blue);
+    top: 75px;
+    right: 100px;
+    z-index: 1;
 }
 
 .red-bg {
     background-color: var(--tertiary-orange);
     color: var(--primary-orange);
+    z-index: 0;
+    left: 100px;
+    top: 0px;
 }
 
 .green-bg {
     background-color: var(--tertiary-green);
     color: var(--primary-green);
+    bottom: 50px;
+    right: 100px;
+    z-index: -1;
 }
 
 .they-speak {
@@ -62,10 +88,60 @@
     background-color: var(--tertiary-blue);
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light);
+    border-radius: 10px;
+    width: 310px;
+    padding: 5px;
+}
+
+.card img {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.card div {
+    margin: 10px;
+}
+
+.card h4 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .press-releases {
     display: flex;
     flex-direction: column;
     padding: 50px;
     background-color: var(--primary-blue);
     color: var(--light);
+}
+
+@media all and (max-width: 1050px) {
+    .keynums {
+        margin: 0;
+    }
+
+    .keynums div:nth-child(odd) h1,
+    .keynums div:nth-child(even) p,
+    .keynums div:nth-child(odd) p,
+    .keynums div:nth-child(even) h1 {
+        margin: 0;
+        text-align: left;
+    }
+
+    .keynums div {
+        top: initial;
+        left: initial;
+        right: initial;
+        bottom: initial;
+        border-radius: 0;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
 }

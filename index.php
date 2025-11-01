@@ -15,8 +15,8 @@
         <?php include(dirname(__FILE__, 1) . '/assets/src/front/header.php') ?>
         <div class="top-content">
             <div>
-                <h3>EcoGestUM</h3>
-                <h3>Le service de recyclage <em>made in</em></h3>
+                <h3 class="poppins">EcoGestUM</h3>
+                <h3 class="poppins">Le service de recyclage <em>made in</em></h3>
                 <h1 class="title">Le Mans Université</h1>
                 <a href="/login/" class="button">Rejoindre</a>
             </div>
@@ -37,20 +37,22 @@
         </div>
     </section>
     <section class="they-speak">
-        <h2>Ils parlent de nous</h2>
+        <h3>Ils parlent de nous</h3>
         <div class="cards-container">
             <!-- A faire en php -->
             <div class="card">
                 <img src="/assets/img/portraits/theo.png" alt="Portrait de Théo">
-                <h3>Théo M., étudiant à l’ENSIM</h3>
-                <p>Le concept de EcoGestUM est incroyable. Il m'a permis de donner mon ordinateur à une autre personne au lieu de le jeter.</p>
+                <div>
+                    <h4>Théo M., étudiant à l’ENSIM</h4>
+                    <p>Le concept de EcoGestUM est incroyable. Il m'a permis de donner mon ordinateur à une autre personne au lieu de le jeter.</p>
+                </div>
             </div>
         </div>
     </section>
     <section class="press-releases">
         <h2>Communiqués de la direction de l’Université</h2>
         <!-- A faire en php -->
-         <a href="/press-releases" class="button">Voir plus de communiqués</a>
+        <a href="/press-releases" class="button">Voir plus de communiqués</a>
     </section>
     <?php include(dirname(__FILE__, 1) . '/assets/src/front/footer.php') ?>
 </body>
