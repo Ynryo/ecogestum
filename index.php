@@ -38,16 +38,70 @@
     </section>
     <section class="they-speak">
         <h3>Ils parlent de nous</h3>
-        <div class="cards-container">
-            <!-- A faire en php -->
-            <div class="card">
-                <img src="/assets/img/portraits/theo.png" alt="Portrait de Théo">
-                <div>
-                    <h4>Théo M., étudiant à l’ENSIM</h4>
-                    <p>Le concept de EcoGestUM est incroyable. Il m'a permis de donner mon ordinateur à une autre personne au lieu de le jeter.</p>
+        <div class="scroller">
+            <div class="cards-container">
+                <!-- A faire en php -->
+                <div class="card">
+                    <img src="/assets/img/portraits/theo.png" alt="Portrait de Théo">
+                    <div>
+                        <h4>Théo M., étudiant à l’ENSIM</h4>
+                        <p>Le concept de EcoGestUM est incroyable. Il m'a permis de donner mon ordinateur à une autre personne au lieu de le jeter.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/img/portraits/jade.png" alt="Portrait de Jade">
+                    <div>
+                        <h4>Jade, enseignante en Fac de Droit</h4>
+                        <p>Grâce à EcoGestUM, j’ai pu récupérer du matériel pédagogique pour mes cours, tout en participant à une démarche écoresponsable.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/img/portraits/romain.png" alt="Portrait de Romain">
+                    <div>
+                        <h4>Romain, étudiant en Fac de Sciences</h4>
+                        <p>Je trouve l’application très intuitive, et elle facilite vraiment le tri et la réutilisation des objets à l’université.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/img/portraits/ines.png" alt="Portrait de Inès">
+                    <div>
+                        <h4>Inès, étudiante à l’IUT de Laval</h4>
+                        <p>J'ai été ravi de pouvoir proposer des livres que je n'utilisais plus à d'autres étudiants, le tout via EcoGestUM.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/img/portraits/thomas.png" alt="Portrait de Thomas">
+                    <div>
+                        <h4>Thomas, étudiant à l’ENSIM</h4>
+                        <p>C'est une belle initiative pour limiter le gaspillage et encourager la mutualisation des ressources sur le campus.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/img/portraits/lea.png" alt="Portrait de Léa">
+                    <div>
+                        <h4>Léa, étudiante en Fac de Lettres</h4>
+                        <p>EcoGestUM m'a aidé à trouver un équipement sportif en très bon état, tout en faisant un geste pour l’environnement.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/img/portraits/maxime.png" alt="Portrait de Maxime">
+                    <div>
+                        <h4>Maxime, enseignant à l’IUT du Mans</h4>
+                        <p>J’apprécie le fait qu’EcoGestUM propose une alternative durable pour se débarrasser de ses affaires, tout en favorisant les échanges entre membres de la communauté universitaire.</p>
+                    </div>
                 </div>
             </div>
         </div>
+        <a href="" class="button">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+        </a>
+        <a href="" class="button">
+            <span class="material-symbols-outlined">
+                arrow_forward
+            </span>
+        </a>
     </section>
     <section class="press-releases">
         <h2>Communiqués de la direction de l’Université</h2>
