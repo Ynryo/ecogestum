@@ -1,5 +1,10 @@
 .button,
 .button.orange {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
     color: var(--light);
     font-family: Poppins, sans-serif;

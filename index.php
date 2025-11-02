@@ -92,21 +92,23 @@
                 </div>
             </div>
         </div>
-        <a href="" class="button">
-            <span class="material-symbols-outlined">
-                arrow_back
-            </span>
-        </a>
-        <a href="" class="button">
-            <span class="material-symbols-outlined">
-                arrow_forward
-            </span>
-        </a>
+        <div class="carrousel-controller">
+            <a href="" class="button">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+            </a>
+            <a href="" class="button">
+                <span class="material-symbols-outlined">
+                    arrow_forward
+                </span>
+            </a>
+        </div>
     </section>
     <section class="press-releases">
         <h2>Communiqués de la direction de l’Université</h2>
         <!-- A faire en php -->
-        <a href="/press-releases" class="button">Voir plus de communiqués</a>
+        <a href="/press-releases/" class="button">Voir plus de communiqués</a>
     </section>
     <?php include(dirname(__FILE__, 1) . '/assets/src/front/footer.php') ?>
 </body>

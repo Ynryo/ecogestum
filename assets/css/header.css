@@ -11,3 +11,14 @@
 .header img {
     height: 40px;
 }
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    background-color: var(--tertiary-blue);
+    background-image: url('/assets/img/lmu-logo-for-titles.png');
+    background-repeat: no-repeat;
+    color: var(--primary-blue);
+}

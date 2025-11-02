@@ -14,7 +14,7 @@
     padding-left: 100px;
 }
 
-.top-content > div {
+.top-content>div {
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -130,6 +130,15 @@
     margin-bottom: 10px;
 }
 
+.carrousel-controller {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
 .press-releases {
     display: flex;
     flex-direction: column;
@@ -164,4 +173,18 @@
         gap: 20px;
     }
 
+}
+
+@media all and (max-width: 900px) {
+    .top-content {
+        padding: 10px;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 350px) {
+    .keynums div {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
