@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+section.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 40%;
+    padding: 30px;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.login-container img {
+    width: 13rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+}
+
+section.cas-background {
+    width: 60%;
+    height: 100dvh;
+    background-image: url(/assets/img/cas-background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
