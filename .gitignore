@@ -2,5 +2,6 @@
 .env
 modifs_sql.txt
 /assets/src/back/conn.php
+/assets/src/back/login_process.php
 
 /vendor/

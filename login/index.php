@@ -1,11 +1,4 @@
-<?php 
-session_start();
-
-if (isset($_SESSION['user_id'])) {
-    header('Location: /');
-    exit();
-}
-?>
+<?php include(dirname(__FILE__, 2) . '/assets/src/back/files_header.php') ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -21,10 +14,34 @@ if (isset($_SESSION['user_id'])) {
     <section class="login-container">
         <div class="login-box">
             <img src="/assets/img/lmu-logo.png" alt="Logo de Le Mans Université">
-            <form action="/assets/src/back/login_process.php" method="POST" onsubmit="loginFormSubmission();">
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                include_once dirname(__FILE__, 2) . '/assets/src/back/conn.php';
+                $username = $_POST['identifiant'];
+                $password = $_POST['password'];
+
+                $stmt = $pdo->prepare("SELECT id_utilisateur, mdp_univ FROM UTILISATEUR WHERE identifiant = :username");
+                $stmt->bindParam(':username', $username);
+                $stmt->execute();
+                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                if ($user) {
+                    if (password_verify($password, $user['mdp_univ'])) {
+                        $_SESSION['user_id'] = $user['id_utilisateur'];
+                        header("Location: /");
+                        exit();
+                    } else {
+                        echo "<p class=\"error\">Mot de passe invalide.</p>";
+                    }
+                } else {
+                    echo "<p class=\"error\">No user found with that username.</p>";
+                }
+            }
+            ?>
+            <form action="" method="POST">
                 <div class="input-group">
-                    <label for="username">Nom d'utilisateur</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="identifiant">Nom d'utilisateur</label>
+                    <input type="text" id="identifiant" name="identifiant" required>
                 </div>
                 <div class="input-group">
                     <label for="password">Mot de passe</label>

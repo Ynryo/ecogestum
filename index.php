@@ -1,10 +1,4 @@
-<?php 
-session_start(); 
-if (isset($_SESSION['user_id'])) {
-    echo "kk";
-    exit();
-}
-?>
+<?php include(dirname(__FILE__, 1) . '/assets/src/back/files_header.php') ?>
 <!DOCTYPE html>
 <html lang="fr">
 
