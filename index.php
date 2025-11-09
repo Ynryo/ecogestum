@@ -10,6 +10,7 @@
     <link rel="preload" fetchpriority="high" as="image" href="/assets/img/landing-page-background.png" type="image/png">
     <link rel="stylesheet" href="/assets/css/landing-page.css">
     <link rel="stylesheet" href="/assets/css/press-releases.css">
+    <link rel="stylesheet" href="/assets/css/search.css">
 </head>
 
 <body>
