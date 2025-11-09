@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php 
+session_start();
+
+if (isset($_SESSION['user_id'])) {
+    header('Location: /');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -14,7 +21,7 @@
     <section class="login-container">
         <div class="login-box">
             <img src="/assets/img/lmu-logo.png" alt="Logo de Le Mans Université">
-            <form action="/assets/src/back/login_process.php" method="POST">
+            <form action="/assets/src/back/login_process.php" method="POST" onsubmit="loginFormSubmission();">
                 <div class="input-group">
                     <label for="username">Nom d'utilisateur</label>
                     <input type="text" id="username" name="username" required>
@@ -25,7 +32,7 @@
                 </div>
                 <button class="button blue">Connexion</button>
                 <a href="/signup/" class="button blue secondary">1ère connexion</a>
-                <a href="/password-loss/" class="link blue">Mot de passe oublié ?</a>
+                <a href="https://activation.univ-lemans.fr/cgi-bin/activation/mdp-perdu.pl" class="link blue">Mot de passe oublié ?</a>
             </form>
         </div>
     </section>

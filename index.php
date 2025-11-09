@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+if (isset($_SESSION['user_id'])) {
+    echo "kk";
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 

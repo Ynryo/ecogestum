@@ -1,2 +1,6 @@
 .htaccess
 .env
+modifs_sql.txt
+/assets/src/back/conn.php
+
+/vendor/
