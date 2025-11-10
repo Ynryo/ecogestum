@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php include(dirname(__FILE__, 2) . '/assets/src/back/files_header.php') ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -9,6 +9,7 @@
     <link rel="preload" fetchpriority="high" as="image" href="/assets/img/lmu-logo-for-titles.png" type="image/png">
     <?php include(dirname(__FILE__, 2) . '/assets/src/back/assets.php') ?>
     <link rel="stylesheet" href="/assets/css/press-releases.css">
+    <link rel="stylesheet" href="/assets/css/search.css">
 </head>
 
 <body>
