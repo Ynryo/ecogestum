@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/assets/css/landing-page.css">
     <link rel="stylesheet" href="/assets/css/press-releases.css">
     <link rel="stylesheet" href="/assets/css/search.css">
+    <link rel="stylesheet" href="/assets/css/cards.css">
 </head>
 
 <body>

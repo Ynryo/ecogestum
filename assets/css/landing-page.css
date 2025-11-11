@@ -101,36 +101,6 @@
     display: none
 }
 
-.cards-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--light);
-    border-radius: 10px;
-    width: 310px;
-    padding: 5px;
-}
-
-.card img {
-    border-radius: 5px 5px 0px 0px;
-}
-
-.card div {
-    margin: 10px;
-}
-
-.card h4 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
 .carrousel-controller {
     display: flex;
     flex-direction: row;

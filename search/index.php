@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include(dirname(__FILE__, 2) . '/assets/src/back/assets.php') ?>
     <link rel="stylesheet" href="/assets/css/search.css">
+    <link rel="stylesheet" href="/assets/css/cards.css">
 </head>
 
 <body>
@@ -17,22 +18,26 @@
         <?php
         include(dirname(__FILE__, 2) . '/assets/src/back/conn.php');
 
-        $stmt = $pdo->prepare("SELECT o.nom_objet, c.titre_categorie FROM OBJET AS o JOIN CATEGORIE AS c ON o.id_categorie = c.id_categorie WHERE nom_objet LIKE CONCAT('%', :q, '%') OR desc_objet LIKE CONCAT('%', :q, '%')");
+        $stmt = $pdo->prepare("SELECT o.id_objet, o.nom_objet, o.desc_objet, c.titre_categorie FROM OBJET AS o JOIN CATEGORIE AS c ON o.id_categorie = c.id_categorie WHERE nom_objet LIKE CONCAT('%', :q, '%') OR desc_objet LIKE CONCAT('%', :q, '%')");
         $stmt->bindParam(':q', $_GET["q"]);
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        if (!empty($results)):
-            foreach ($results as $product): ?>
-                <div>
-                    <p><?= htmlspecialchars($product["nom_objet"]); ?> (<?= htmlspecialchars($product["titre_categorie"]); ?>)</p>
-                </div>
-            <?php endforeach;
-        else: ?>
-            <p>Aucun résultat trouvé.</p>
-        <?php endif; ?>
+        ?>
+        <div class="cards-container">
+            <?php if (!empty($results)):
+                foreach ($results as $product): ?>
+                    <a href="/products/?id=<?= htmlspecialchars($product["id_objet"]) ?>" class="card little">
+                        <img src="/assets/img/products/<?= htmlspecialchars($product["id_objet"]); ?>.png" alt="<?= htmlspecialchars($product["desc_objet"]); ?>">
+                        <h4><?= htmlspecialchars($product["nom_objet"]); ?></h4>
+                        <p>(<?= htmlspecialchars($product["titre_categorie"]); ?>)</p>
+                    </a>
+                <?php endforeach; ?>
+        </div>
+    <?php else: ?>
+        <p>Aucun résultat trouvé.</p>
+    <?php endif; ?>
     </section>
-
+    <?php include(dirname(__FILE__, 2) . '/assets/src/front/footer.php') ?>
 </body>
 
 </html>
