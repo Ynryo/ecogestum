@@ -8,13 +8,14 @@
         <img src="/assets/img/ecogestum-logo.png" alt="Logo de Le Mans Université">
     </a>
     <?php if (isset($_SESSION['user_id'])): ?>
+        <!-- refaire la search bar -->
         <form action="/search/" method="get" class="search-container">
             <button type="submit" class="icon">
                 <span class="material-symbols-outlined">
                     search
                 </span>
             </button>
-            <input type="text" name="q" id="search" class="poppins" placeholder="Rechercher">
+            <input type="text" name="p" id="search" class="poppins" placeholder="Rechercher">
         </form>
         <a href="/logout/" class="button">Se déconnecter</a>
     <?php else: ?>

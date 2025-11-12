@@ -14,12 +14,12 @@
 <body>
     <?php include(dirname(__FILE__, 2) . '/assets/src/front/header.php') ?>
     <section class="main">
-        <p>Résultats de recherche pour : <?php echo $_GET["q"]; ?></p>
+        <p>Résultats de recherche pour : <?php echo $_GET["p"]; ?></p>
         <?php
         include(dirname(__FILE__, 2) . '/assets/src/back/conn.php');
 
-        $stmt = $pdo->prepare("SELECT o.id_objet, o.nom_objet, o.desc_objet, c.titre_categorie FROM OBJET AS o JOIN CATEGORIE AS c ON o.id_categorie = c.id_categorie WHERE nom_objet LIKE CONCAT('%', :q, '%') OR desc_objet LIKE CONCAT('%', :q, '%')");
-        $stmt->bindParam(':q', $_GET["q"]);
+        $stmt = $pdo->prepare("SELECT o.id_objet, o.nom_objet, o.desc_objet, c.titre_categorie FROM OBJET AS o JOIN CATEGORIE AS c ON o.id_categorie = c.id_categorie WHERE nom_objet LIKE CONCAT('%', :p, '%') OR desc_objet LIKE CONCAT('%', :p, '%')");
+        $stmt->bindParam(':p', $_GET["p"]);
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         ?>

@@ -1,3 +1,4 @@
+/* BUTTONS */
 .button,
 .button.orange {
     display: inline-flex;
@@ -62,6 +63,18 @@
 /* LINKS */
 .link {
     text-decoration: none;
+    color: var(--dark);
+}
+
+.link.blue {
+    color: var(--primary-blue);
+}
+
+.link.orange {
+    color: var(--primary-orange);
+}
+
+.link.light {
     color: var(--light);
 }
 
@@ -69,16 +82,12 @@
     text-decoration: underline;
 }
 
-a.link img {
+.link img {
     cursor: pointer;
     height: 35px;
     transition: transform 0.2s;
 }
 
-a.link img:hover {
+.link img:hover {
     transform: scale(1.3);
-}
-
-a.link.blue {
-    color: var(--primary-blue);
 }

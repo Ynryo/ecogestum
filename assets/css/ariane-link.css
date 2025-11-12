@@ -1,0 +1,20 @@
+.ariane-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.ariane-link .link {
+    font-size: 16px;
+}
+
+.ariane-link .material-symbols-outlined {
+    font-size: 20px;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}

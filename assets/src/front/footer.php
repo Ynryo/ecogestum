@@ -8,25 +8,25 @@
     </div>
     <div>
         <h4>Accès rapides</h4>
-        <a href="" class="link">Tous nos sites web</a>
-        <a href="" class="link">Espace presse</a>
-        <a href="" class="link">Offres d'emploi</a>
-        <a href="" class="link">Marchés publics</a>
-        <a href="" class="link">Charte graphique</a>
+        <a href="" class="link light">Tous nos sites web</a>
+        <a href="" class="link light">Espace presse</a>
+        <a href="" class="link light">Offres d'emploi</a>
+        <a href="" class="link light">Marchés publics</a>
+        <a href="" class="link light">Charte graphique</a>
     </div>
     <div>
         <h4>Restons connectés</h4>
         <div class="socials">
-            <a href="https://www.instagram.com/lemansuniversite/?hl=fr" class="link">
+            <a href="https://www.instagram.com/lemansuniversite/?hl=fr" class="link light">
                 <img src="/assets/img/socials/instagram.png" alt="Logo d'Instagram">
             </a>
-            <a href="https://www.linkedin.com/school/universit%C3%A9-du-maine-le-mans-laval/mycompany/" class="link">
+            <a href="https://www.linkedin.com/school/universit%C3%A9-du-maine-le-mans-laval/mycompany/" class="link light">
                 <img src="/assets/img/socials/linkedln.png" alt="Logo de LinkedIn">
             </a>
-            <a href="https://www.youtube.com/channel/UCGcQ5RW44I0xEIg4pNS69pg" class="link">
+            <a href="https://www.youtube.com/channel/UCGcQ5RW44I0xEIg4pNS69pg" class="link light">
                 <img src="/assets/img/socials/youtube.png" alt="Logo de YouTube">
             </a>
-            <a href="https://www.facebook.com/LeMansUniversite" class="link">
+            <a href="https://www.facebook.com/LeMansUniversite" class="link light">
                 <img src="/assets/img/socials/facebook.png" alt="Logo de Facebook">
             </a>
         </div>
