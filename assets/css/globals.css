@@ -181,8 +181,8 @@ h3 {
 
 h4 {
     font-family: Goia, sans-serif;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 400;
 
 }
 
@@ -224,6 +224,7 @@ a {
 }
 
 .role::before {
+    display: inline-block;
     content: "No role defined";
     background-color: var(--dark);
     color: var(--medium);
@@ -279,6 +280,58 @@ a {
     color: #FF0004;
 }
 
+/* LIEU COMPO */
+.composante {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.composante::before {
+    display: inline-block;
+    content: "No composante defined";
+    background-color: var(--dark);
+    color: var(--medium);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.composante.c1::before {
+    content: "Faculté de Droit, Sciences économiques & de Gestion";
+    background-color: #E3004740;
+    color: var(--components-droit-fac);
+}
+
+.composante.c2::before {
+    content: "Faculté des Lettres, Langues & Sciences humaines";
+    background-color: #485BA640;
+    color: var(--components-lettres-fac);
+}
+
+.composante.c3::before {
+    content: "Faculté des Sciences et Techniques";
+    background-color: #00778140;
+    color: var(--components-sciences-fac);
+}
+
+.composante.c4::before {
+    content: "IUT du Mans";
+    background-color: #F7A70B40;
+    color: var(--components-lm-iut);
+}
+
+.composante.c5::before {
+    content: "IUT de Laval";
+    background-color: #CE0E6A40;
+    color: var(--components-laval-iut);
+}
+
+.composante.c6::before {
+    content: "ENSIM";
+    background-color: #077FA540;
+    color: var(--components-ensim);
+}
+
 /* ERRORS */
 .error {
     background-color: rgba(255, 0, 0, 0.40);
@@ -292,10 +345,11 @@ a {
     text-align: center;
 }
 
-
+/* BOXS */
 .main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 20px 50px;
+    gap: 20px;
 }

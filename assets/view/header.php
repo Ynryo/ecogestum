@@ -15,7 +15,7 @@
                     search
                 </span>
             </button>
-            <input type="text" name="p" id="search" class="poppins" placeholder="Rechercher">
+            <input type="text" name="q" id="search" class="poppins" placeholder="Rechercher">
         </form>
         <a href="/logout/" class="button">Se déconnecter</a>
     <?php else: ?>

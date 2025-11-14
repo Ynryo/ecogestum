@@ -1,4 +1,4 @@
-<?php include(dirname(__FILE__, 2) . '/assets/src/back/files_header.php') ?>
+<?php include(dirname(__FILE__, 2) . '/assets/src/files_header.php') ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" fetchpriority="high" as="image" href="/assets/img/lmu-logo-for-titles.png" type="image/png">
-    <?php include(dirname(__FILE__, 2) . '/assets/src/back/assets.php') ?>
+    <?php include(dirname(__FILE__, 2) . '/assets/src/assets.php') ?>
     <link rel="stylesheet" href="/assets/css/press-releases.css">
     <link rel="stylesheet" href="/assets/css/search.css">
 </head>
 
 <body>
     <section class="top-container">
-        <?php include(dirname(__FILE__, 2) . '/assets/src/front/header.php') ?>
+        <?php include(dirname(__FILE__, 2) . '/assets/view/header.php') ?>
         <div class="main-title">
             <h1>Communiqués de presse</h1>
         </div>
@@ -82,7 +82,7 @@
             </div>
         </div>
     </section>
-    <?php include(dirname(__FILE__, 2) . '/assets/src/front/footer.php') ?>
+    <?php include(dirname(__FILE__, 2) . '/assets/view/footer.php') ?>
 </body>
 
 </html>

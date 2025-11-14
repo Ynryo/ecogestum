@@ -60,6 +60,10 @@
     color: var(--hovered-blue);
 }
 
+.button.full {
+    width: 100%;
+}
+
 /* LINKS */
 .link {
     text-decoration: none;

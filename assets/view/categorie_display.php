@@ -1,41 +1,47 @@
-<?php
-include(dirname(__FILE__, 2) . '/assets/src/files_header.php');
-include(dirname(__FILE__, 2) . '/assets/src/conn.php');
+<?php 
+include(dirname(__FILE__, 3) . '/assets/src/files_header.php');
+include(dirname(__FILE__, 3) . '/assets/src/conn.php');
 
-$stmt = $pdo->prepare("SELECT o.id_objet, o.nom_objet, o.desc_objet, c.titre_categorie FROM OBJET AS o JOIN CATEGORIE AS c ON o.id_categorie = c.id_categorie WHERE nom_objet LIKE CONCAT('%', :q, '%') OR desc_objet LIKE CONCAT('%', :q, '%')");
-$stmt->bindParam(':q', $_GET["q"]);
+$stmt = $pdo->prepare("SELECT * FROM categorie c JOIN objet o ON c.id_categorie = o.id_categorie WHERE c.id_categorie = :c");
+$stmt->bindParam(':c', $_GET["c"]);
 $stmt->execute();
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$cat = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+if (empty($cat)) {
+    header('HTTP/1.0 404 Not Found');
+    header('Location: /errors/404');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-    <title>EcoGestUM - Rechercher</title>
+    <title>EcoGestUM - <?= htmlspecialchars($cat[0]["titre_categorie"]) ?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include(dirname(__FILE__, 2) . '/assets/src/assets.php') ?>
+    <?php include(dirname(__FILE__, 3) . '/assets/src/assets.php') ?>
     <link rel="stylesheet" href="/assets/css/search.css">
-    <link rel="stylesheet" href="/assets/css/boxs.css">
+    <link rel="stylesheet" href="/assets/css/products.css">
 </head>
 
 <body>
-    <?php include(dirname(__FILE__, 2) . '/assets/view/header.php') ?>
+    <?php include(dirname(__FILE__, 3) . '/assets/view/header.php') ?>
     <section class="main">
         <div class="ariane-link">
             <a href="/" class="link">Accueil</a>
             <span class="material-symbols-outlined">arrow_forward_ios</span>
             <a href="/products/" class="link">Produits</a>
 
-            <?php if (isset($_GET["p"])): ?>
+            <?php if (isset($_GET["c"])): ?>
                 <span class="material-symbols-outlined">arrow_forward_ios</span>
-                <span>Recherche : <?= htmlspecialchars($_GET["q"]) ?></span>
+                <?= htmlspecialchars($cat[0]["titre_categorie"]) ?>
             <?php endif; ?>
         </div>
-        
+
         <div class="cards-container">
-            <?php if (!empty($results)):
-                foreach ($results as $product): ?>
+            <?php if (!empty($cat)):
+                foreach ($cat as $product): ?>
                     <a href="/products/?p=<?= htmlspecialchars($product["id_objet"]) ?>" class="card little">
                         <img src="/assets/img/products/<?= htmlspecialchars($product["id_objet"]); ?>_1.png" alt="<?= htmlspecialchars($product["desc_objet"]); ?>">
                         <h4><?= htmlspecialchars($product["nom_objet"]); ?></h4>
@@ -44,10 +50,10 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php endforeach; ?>
         </div>
     <?php else: ?>
-        <p>Aucun résultat trouvé.</p>
+        <p>Aucun objet dans cette catégorie.</p>
     <?php endif; ?>
     </section>
-    <?php include(dirname(__FILE__, 2) . '/assets/view/footer.php') ?>
+    <?php include(dirname(__FILE__, 3) . '/assets/view/footer.php') ?>
 </body>
 
 </html>

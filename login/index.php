@@ -1,4 +1,4 @@
-<?php include(dirname(__FILE__, 2) . '/assets/src/back/files_header.php') ?>
+<?php include(dirname(__FILE__, 2) . '/assets/src/files_header.php') ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,7 +6,7 @@
     <title>EcoGestUM - Connexion</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include(dirname(__FILE__, 2) . '/assets/src/back/assets.php') ?>
+    <?php include(dirname(__FILE__, 2) . '/assets/src/assets.php') ?>
     <link rel="stylesheet" href="/assets/css/session.css">
 </head>
 
@@ -16,20 +16,26 @@
             <img src="/assets/img/lmu-logo.png" alt="Logo de Le Mans Université">
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                include_once dirname(__FILE__, 2) . '/assets/src/back/conn.php';
+                include_once dirname(__FILE__, 2) . '/assets/src/conn.php';
                 $username = $_POST['identifiant'];
                 $password = $_POST['password'];
 
                 $stmt = $pdo->prepare("SELECT id_utilisateur, mdp_univ FROM UTILISATEUR WHERE identifiant = :username");
                 $stmt->bindParam(':username', $username);
-                $stmt->execute();
+                echo "kk";
+                try {
+                    $stmt->execute();
+                } catch (PDOException $e) {
+                    die("<p class=\"error\">Ereeur SQL : " . $e->getMessage() . "</p>");
+                }
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                // $stmt->execute();
 
                 if ($user) {
                     if (password_verify($password, $user['mdp_univ'])) {
                         $_SESSION['user_id'] = $user['id_utilisateur'];
                         header("Location: /");
-                        exit();
+                        echo "kk";
                     } else {
                         echo "<p class=\"error\">Mot de passe invalide.</p>";
                     }
