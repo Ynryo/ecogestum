@@ -1,4 +1,4 @@
-<?php 
+<?php
 include(dirname(__FILE__, 3) . '/assets/src/files_header.php');
 include(dirname(__FILE__, 3) . '/assets/src/conn.php');
 
@@ -41,9 +41,11 @@ if (empty($cat)) {
 
         <div class="cards-container">
             <?php if (!empty($cat)):
-                foreach ($cat as $product): ?>
+                foreach ($cat as $product):
+                    $pattern = $_SERVER["DOCUMENT_ROOT"] . "/assets/img/products/" . $product["id_objet"] . '_*';
+                    $files = glob($pattern); ?>
                     <a href="/products/?p=<?= htmlspecialchars($product["id_objet"]) ?>" class="card little">
-                        <img src="/assets/img/products/<?= htmlspecialchars($product["id_objet"]); ?>_1.png" alt="<?= htmlspecialchars($product["desc_objet"]); ?>">
+                        <img src="<?= str_replace($_SERVER["DOCUMENT_ROOT"], "", $files[0]) ?>" alt="<?= htmlspecialchars($product["desc_objet"]); ?>">
                         <h4><?= htmlspecialchars($product["nom_objet"]); ?></h4>
                         <p>(<?= htmlspecialchars($product["titre_categorie"]); ?>)</p>
                     </a>
