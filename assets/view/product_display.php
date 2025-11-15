@@ -1,4 +1,4 @@
-<?php 
+<?php
 include(dirname(__FILE__, 3) . '/assets/src/files_header.php');
 include(dirname(__FILE__, 3) . '/assets/src/conn.php');
 require_once dirname(__FILE__, 3) . '/assets/src/date.php';
@@ -50,7 +50,7 @@ if ($objet == null) {
                 <?php
                 $finfo = finfo_open(FILEINFO_MIME_TYPE);
                 foreach ($files as $file):
-                    if (finfo_file($finfo, $file) === 'image/png' || finfo_file($finfo, $file) === 'image/jpeg'):
+                    if (finfo_file($finfo, $file) === 'image/png' || finfo_file($finfo, $file) === 'image/jpeg' || finfo_file($finfo, $file) === 'image/webp'):
                         $img = str_replace($_SERVER["DOCUMENT_ROOT"], "", $file); ?>
                         <img src="<?= htmlspecialchars($img) ?>" alt="">
                 <?php endif;
@@ -58,6 +58,11 @@ if ($objet == null) {
                 finfo_close($finfo);
                 ?>
             </div>
+            <a href="" class="link love">
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+            </a>
             <div class="column">
                 <h3><?= htmlspecialchars($objet["nom_objet"]) ?></h3>
                 <h4 class="poppins"><?= htmlspecialchars($objet["size"]) ?> | <?= htmlspecialchars($objet["etat"]) ?></h4>

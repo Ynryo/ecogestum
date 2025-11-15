@@ -31,7 +31,6 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <span class="material-symbols-outlined">arrow_forward_ios</span>
                 Recherche : <?= htmlspecialchars($_GET["q"]) ?>
             <?php endif; ?>
-            
         </div>
 
         <div class="cards-container">
