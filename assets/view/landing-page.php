@@ -1,30 +1,46 @@
-<section class="top-container">
-    <div class="top-content">
-        <div>
-            <h3 class="poppins">EcoGestUM</h3>
-            <h3 class="poppins">Le service de recyclage <em>made in</em></h3>
-            <h1 class="title">Le Mans Université</h1>
-            <a href="/login/" class="button">Rejoindre</a>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>EcoGestUM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include(dirname(__FILE__, 3) . '/assets/src/assets.php') ?>
+    <link rel="preload" fetchpriority="high" as="image" href="/assets/img/landing-page-background.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/landing-page.css">
+    <link rel="stylesheet" href="/assets/css/press-releases.css">
+    <link rel="stylesheet" href="/assets/css/search.css">
+    <link rel="stylesheet" href="/assets/css/boxs.css">
+</head>
+
+<body>
+    <?php include(dirname(__FILE__, 3) . '/assets/view/header.php'); ?>
+    <section class="top-container">
+        <div class="top-content">
+            <div>
+                <h3 class="poppins">EcoGestUM</h3>
+                <h3 class="poppins">Le service de recyclage <em>made in</em></h3>
+                <h1 class="title">Le Mans Université</h1>
+                <a href="/login/" class="button">Rejoindre</a>
+            </div>
         </div>
-    </div>
-</section>
-<section class="keynums">
-    <div class="blue-bg">
-        <h1>18.054</h1>
-        <p>objets déjà recyclés</p>
-    </div>
-    <div class="red-bg">
-        <h1>1.569</h1>
-        <p>objets disponibles actuellement</p>
-    </div>
-    <div class="green-bg">
-        <h1>19.058</h1>
-        <p>tonnes équivalent CO2 économisés chaque année</p>
-    </div>
-</section>
-<section class="they-speak">
-    <h3>Ils parlent de nous</h3>
-    <div class="scroller">
+    </section>
+    <section class="keynums">
+        <div class="blue-bg">
+            <h1>18.054</h1>
+            <p>objets déjà recyclés</p>
+        </div>
+        <div class="red-bg">
+            <h1>1.569</h1>
+            <p>objets disponibles actuellement</p>
+        </div>
+        <div class="green-bg">
+            <h1>19.058</h1>
+            <p>tonnes équivalent CO2 économisés chaque année</p>
+        </div>
+    </section>
+    <section class="they-speak">
+        <h3>Ils parlent de nous</h3>
         <div class="cards-container">
             <!-- A faire en php -->
             <div class="card">
@@ -77,42 +93,46 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="carrousel-controller">
-        <a href="" class="button">
-            <span class="material-symbols-outlined">
-                arrow_back
-            </span>
-        </a>
-        <a href="" class="button">
-            <span class="material-symbols-outlined">
-                arrow_forward
-            </span>
-        </a>
-    </div>
-</section>
-<section class="press-releases">
-    <h2>Communiqués de la direction de l’Université</h2>
-    <!-- A faire en php -->
-    <div class="pr-container alone">
-        <div class="top-content">
-            <div class="publisher">
-                <h3>Delphine LETORT</h3>
-                <span class="role president"></span>
+        <div class="carrousel-controller">
+            <a href="" class="button">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+            </a>
+            <a href="" class="button">
+                <span class="material-symbols-outlined">
+                    arrow_forward
+                </span>
+            </a>
+        </div>
+    </section>
+    <section class="press-releases">
+        <h2>Communiqués de la direction de l’Université</h2>
+        <!-- A faire en php -->
+        <div class="pr-container alone">
+            <div class="top-content">
+                <div class="publisher">
+                    <h3>Delphine LETORT</h3>
+                    <span class="role president"></span>
+                </div>
+                <div class="timedate">
+                    <span>19/09/2025</span>
+                    <span>&#x2022</span>
+                    <span>19h45</span>
+                </div>
             </div>
-            <div class="timedate">
-                <span>19/09/2025</span>
-                <span>&#x2022</span>
-                <span>19h45</span>
+            <div class="content">
+                Lorem ipsum dolor sit amet. A consectetur placeat vel perspiciatis quibusdam vel iste voluptatum ex dicta ipsam qui doloremque eligendi ea deserunt laboriosam. Quo quasi officiis et odio architecto et velit voluptas et corrupti doloremque ab iste esse et earum veniam et expedita laborum.
+                <br><br>
+                Ab accusamus voluptatem et reprehenderit dolor et enim commodi ut internos recusandae nam nobis velit. Hic ducimus nisi et internos quia et aperiam aperiam est dolores omnis. Eum itaque libero cum consequuntur dolore et mollitia saepe ut voluptatem dicta ea ipsa galisum sed voluptates voluptatibus.
+                <br><br>
+                Et vero nesciunt aut voluptates maiores et vitae quas ut vero iusto sed corrupti itaque ut dolore quibusdam aut porro eveniet. Rem rerum odit quo rerum consectetur et architecto provident aut voluptatem incidunt et debitis voluptatum est omnis eligendi. Non odit magnam rem quis quis ut corporis facilis non officiis blanditiis.
             </div>
         </div>
-        <div class="content">
-            Lorem ipsum dolor sit amet. A consectetur placeat vel perspiciatis quibusdam vel iste voluptatum ex dicta ipsam qui doloremque eligendi ea deserunt laboriosam. Quo quasi officiis et odio architecto et velit voluptas et corrupti doloremque ab iste esse et earum veniam et expedita laborum.
-            <br><br>
-            Ab accusamus voluptatem et reprehenderit dolor et enim commodi ut internos recusandae nam nobis velit. Hic ducimus nisi et internos quia et aperiam aperiam est dolores omnis. Eum itaque libero cum consequuntur dolore et mollitia saepe ut voluptatem dicta ea ipsa galisum sed voluptates voluptatibus.
-            <br><br>
-            Et vero nesciunt aut voluptates maiores et vitae quas ut vero iusto sed corrupti itaque ut dolore quibusdam aut porro eveniet. Rem rerum odit quo rerum consectetur et architecto provident aut voluptatem incidunt et debitis voluptatum est omnis eligendi. Non odit magnam rem quis quis ut corporis facilis non officiis blanditiis.
-        </div>
-    </div>
-    <a href="/press-releases/" class="button">Voir plus de communiqués</a>
-</section>
+        <a href="/press-releases/" class="button">Voir plus de communiqués</a>
+    </section>
+
+    <?php include(dirname(__FILE__, 3) . '/assets/view/footer.php'); ?>
+</body>
+
+</html>

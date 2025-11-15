@@ -20,22 +20,20 @@
                 $username = $_POST['identifiant'];
                 $password = $_POST['password'];
 
-                $stmt = $pdo->prepare("SELECT id_utilisateur, mdp_univ FROM UTILISATEUR WHERE identifiant = :username");
+                $stmt = $pdo->prepare("SELECT id_utilisateur, mdp_univ, prenom_utilisateur FROM UTILISATEUR WHERE identifiant = :username");
                 $stmt->bindParam(':username', $username);
-                echo "kk";
                 try {
                     $stmt->execute();
                 } catch (PDOException $e) {
-                    die("<p class=\"error\">Ereeur SQL : " . $e->getMessage() . "</p>");
+                    die("<p class=\"error\">Erreur SQL : " . $e->getMessage() . "</p>");
                 }
                 $user = $stmt->fetch(PDO::FETCH_ASSOC);
-                // $stmt->execute();
 
                 if ($user) {
                     if (password_verify($password, $user['mdp_univ'])) {
                         $_SESSION['user_id'] = $user['id_utilisateur'];
+                        $_SESSION["user_name"] = $user["prenom_utilisateur"];
                         header("Location: /");
-                        echo "kk";
                     } else {
                         echo "<p class=\"error\">Mot de passe invalide.</p>";
                     }

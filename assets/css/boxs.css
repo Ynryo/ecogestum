@@ -5,7 +5,23 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
+    overflow: auto;
+    padding-bottom: 10px;
+    cursor: grab;
+    scroll-behavior: smooth;
+    user-select: none;
 }
+
+.cards-container::-webkit-scrollbar {
+    display: none
+}
+
+div:has(.cards-container) {
+    width: 100%;
+}
+
+
+/* CARD */
 
 .card {
     display: flex;
@@ -23,6 +39,9 @@
 
 .card img {
     border-radius: 5px 5px 0px 0px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card div {

@@ -1,0 +1,12 @@
+.invit-to-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.invit-to-post div {
+    color: var(--primary-blue);
+    background-color: var(--tertiary-blue);
+    gap: 20px;
+}
