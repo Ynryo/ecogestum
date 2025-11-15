@@ -27,17 +27,20 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <span class="material-symbols-outlined">arrow_forward_ios</span>
             <a href="/products/" class="link">Produits</a>
 
-            <?php if (isset($_GET["p"])): ?>
+            <?php if (isset($_GET["q"])): ?>
                 <span class="material-symbols-outlined">arrow_forward_ios</span>
-                <span>Recherche : <?= htmlspecialchars($_GET["q"]) ?></span>
+                Recherche : <?= htmlspecialchars($_GET["q"]) ?>
             <?php endif; ?>
+            
         </div>
-        
+
         <div class="cards-container">
             <?php if (!empty($results)):
-                foreach ($results as $product): ?>
+                foreach ($results as $product):
+                    $pattern = $_SERVER["DOCUMENT_ROOT"] . "/assets/img/products/" . $product["id_objet"] . '_*';
+                    $files = glob($pattern); ?>
                     <a href="/products/?p=<?= htmlspecialchars($product["id_objet"]) ?>" class="card little">
-                        <img src="/assets/img/products/<?= htmlspecialchars($product["id_objet"]); ?>_1.png" alt="<?= htmlspecialchars($product["desc_objet"]); ?>">
+                        <img src="<?= str_replace($_SERVER["DOCUMENT_ROOT"], "", $files[0]) ?>" alt="<?= htmlspecialchars($product["desc_objet"]); ?>">
                         <h4><?= htmlspecialchars($product["nom_objet"]); ?></h4>
                         <p>(<?= htmlspecialchars($product["titre_categorie"]); ?>)</p>
                     </a>
